@@ -9,23 +9,42 @@ namespace NoodleFacts.Modules
     public class NoodleFactModule : ModuleBase<SocketCommandContext>
     {
         [Command("Hi Riley")]
-        public async Task Great1() 
+        public async Task Great1()
         {
             await GetRandomNoodleFactAsync();
         }
 
         [Command("Hi Riley!")]
-        public async Task Great2() 
+        public async Task Great2()
         {
             await GetRandomNoodleFactAsync();
         }
 
         [Command("Hi Riley.")]
-        public async Task Great3() 
+        public async Task Great3()
         {
             await GetRandomNoodleFactAsync();
         }
+
+        [Command("mlem")]
+        public async Task Mlem1()
+        {
+            await ReplyAsync("Mlem!");
+        }
+
+
+        [Command("mlem!")]
+        public async Task Mlem2()
+        {
+            await ReplyAsync("Mlem!");
+        }
         
+        [Command("mlem,")]
+        public async Task Mlem3()
+        {
+            await ReplyAsync("Mlem!");
+        }
+
         public async Task GetRandomNoodleFactAsync()
         {
             string fact = NoodleFactList.GetRandomFact();
@@ -44,7 +63,7 @@ namespace NoodleFacts.Modules
                 fact = fact == "" ? "Snakes are cute" : fact;
                 await ReplyAsync("Mlem! Hi " + Context.User.Mention + "! Did you know that: " + fact);
             }
-            catch(Exception) 
+            catch (Exception)
             {
                 await ReplyAsync("Mlem! That's not a valid fact number!");
             }
