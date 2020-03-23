@@ -48,7 +48,7 @@ namespace NoodleFacts.Facts
 
         public static async void SaveFacts() 
         {
-            string factListJson = JsonConvert.SerializeObject(FactList);
+            string factListJson = JsonConvert.SerializeObject(FactList, Formatting.Indented);
             await File.WriteAllTextAsync(Path.Combine(Directory.GetCurrentDirectory(), "facts.json"), factListJson);
         }
     }
