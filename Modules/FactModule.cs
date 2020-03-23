@@ -29,20 +29,38 @@ namespace NoodleFacts.Modules
         [Command("mlem")]
         public async Task Mlem1()
         {
-            await ReplyAsync("Mlem!");
+            string reply = "Mlem!";
+            Random random = new Random();
+            if (random.Next(100)+1 == 100) 
+            {
+                reply = "*Yawn*";
+            }
+            await ReplyAsync(reply);
         }
 
 
         [Command("mlem!")]
         public async Task Mlem2()
         {
-            await ReplyAsync("Mlem!");
+            string reply = "Mlem!";
+            Random random = new Random();
+            if (random.Next(100)+1 == 100) 
+            {
+                reply = "*Yawn*";
+            }
+            await ReplyAsync(reply);
         }
-        
+
         [Command("mlem,")]
         public async Task Mlem3()
         {
-            await ReplyAsync("Mlem!");
+            string reply = "Mlem!";
+            Random random = new Random();
+            if (random.Next(100)+1 == 100) 
+            {
+                reply = "*Yawn*";
+            }
+            await ReplyAsync(reply);
         }
 
         public async Task GetRandomNoodleFactAsync()
