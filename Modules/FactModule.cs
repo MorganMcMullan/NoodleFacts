@@ -63,6 +63,28 @@ namespace NoodleFacts.Modules
             await ReplyAsync(reply);
         }
 
+        [Command("🐀")]
+        public async Task Nom1()
+        {
+            string reply = "*Nom*";
+            await ReplyAsync(reply);
+        }
+
+        [Command("🐁")]
+        public async Task Nom2()
+        {
+            string reply = "*Nom*";
+            await ReplyAsync(reply);
+        }
+
+        [Command("🐭")]
+        public async Task Nom3()
+        {
+            string reply = "*Nom*";
+            await ReplyAsync(reply);
+        }
+
+
         public async Task GetRandomNoodleFactAsync()
         {
             string fact = NoodleFactList.GetRandomFact();
