@@ -51,7 +51,7 @@ namespace NoodleFacts.Modules
             await ReplyAsync(reply);
         }
 
-        [Command("mlem,")]
+        [Command("mlem.")]
         public async Task Mlem3()
         {
             string reply = "Mlem!";
