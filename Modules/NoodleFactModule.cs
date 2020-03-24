@@ -63,6 +63,18 @@ namespace NoodleFacts.Modules
             await ReplyAsync(reply);
         }
 
+        [Command("mlem?")]
+        public async Task Mlem4()
+        {
+            string reply = "Mlem!";
+            Random random = new Random();
+            if (random.Next(100)+1 == 100) 
+            {
+                reply = "*Yawn*";
+            }
+            await ReplyAsync(reply);
+        }
+
         [Command("🐀")]
         public async Task Nom1()
         {
