@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts.csproj": {}
+    "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts/NoodleFacts.csproj": {}
   },
   "projects": {
-    "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts.csproj": {
+    "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts/NoodleFacts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts.csproj",
+        "projectUniqueName": "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts/NoodleFacts.csproj",
         "projectName": "NoodleFacts",
-        "projectPath": "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts.csproj",
+        "projectPath": "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts/NoodleFacts.csproj",
         "packagesPath": "/home/morgan/.nuget/packages/",
-        "outputPath": "/home/morgan/Documents/Projects/NoodleFacts/obj/",
+        "outputPath": "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/morgan/.nuget/NuGet/NuGet.Config"
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
         }
       }
     }

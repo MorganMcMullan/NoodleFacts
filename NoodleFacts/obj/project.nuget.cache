@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WdJY85DX+obKwmOoV6gwt5VKbsZti6FebxuHdxLCiw/FHXMCzTpVy7jHCv36IXU6ypZPzOM0y3qa+PjiXdUZYw==",
+  "dgSpecHash": "yLoxhg3aaODb9b7NeTClxggnIrp1xujKmkA/H6Or4zmlX0WNBhQKaK+NmwYag/liww4kBVskFimuQDgXVJXe+w==",
   "success": true,
-  "projectFilePath": "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts.csproj",
+  "projectFilePath": "/home/morgan/Documents/Projects/NoodleFacts/NoodleFacts/NoodleFacts.csproj",
   "expectedPackageFiles": [
     "/home/morgan/.nuget/packages/discord.net/2.1.1/discord.net.2.1.1.nupkg.sha512",
     "/home/morgan/.nuget/packages/discord.net.commands/2.1.1/discord.net.commands.2.1.1.nupkg.sha512",
