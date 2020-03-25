@@ -96,6 +96,11 @@ namespace NoodleFacts.Modules
             await ReplyAsync(reply);
         }
 
+        [Command("!inabox")]
+        public async Task InABox()
+        {
+            await ReplyAsync("I'm living in a box now. 🐳📦");
+        }
 
         public async Task GetRandomNoodleFactAsync()
         {
