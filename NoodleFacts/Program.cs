@@ -55,7 +55,7 @@ namespace NoodleFacts
         private IConfiguration BuildConfig()
         {
             return new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+                .SetBasePath($"/app")
                 .AddJsonFile("config.json")
                 .Build();
         }

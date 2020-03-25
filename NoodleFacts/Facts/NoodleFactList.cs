@@ -13,7 +13,7 @@ namespace NoodleFacts.Facts
 
         static NoodleFactList()
         {
-            FactList = JsonConvert.DeserializeObject<List<NoodleFact>>(File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "facts.json")));
+            FactList = JsonConvert.DeserializeObject<List<NoodleFact>>(File.ReadAllText(Path.Combine("/app", "facts.json")));
         }
 
         public static string GetRandomFact()
@@ -43,13 +43,13 @@ namespace NoodleFacts.Facts
 
         public static void LoadFacts()
         {
-            FactList = JsonConvert.DeserializeObject<List<NoodleFact>>(File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "facts.json")));
+            FactList = JsonConvert.DeserializeObject<List<NoodleFact>>(File.ReadAllText(Path.Combine("/app", "facts.json")));
         }
 
         public static async void SaveFacts() 
         {
             string factListJson = JsonConvert.SerializeObject(FactList, Formatting.Indented);
-            await File.WriteAllTextAsync(Path.Combine(Directory.GetCurrentDirectory(), "facts.json"), factListJson);
+            await File.WriteAllTextAsync(Path.Combine("/app", "facts.json"), factListJson);
         }
     }
 }
