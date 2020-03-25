@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
@@ -30,7 +31,19 @@ namespace NoodleFacts
             services.GetRequiredService<LogService>();
             await services.GetRequiredService<CommandHandlingService>().InitializeAsync(services);
 
-            await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable("DiscordToken"));
+            var botToken = Environment.GetEnvironmentVariable("DISCORD_TOKEN");
+
+            try
+            {
+                await _client.LoginAsync(TokenType.Bot, botToken);
+            }
+            catch (Discord.Net.HttpException ex) when (ex.HttpCode == HttpStatusCode.Unauthorized)
+            {
+                Console.WriteLine("Couldn't log in to Discord using DISCORD_TOKEN=\"{0}\". Is it empty or incorrect?", botToken);
+
+                System.Environment.Exit(1);
+            }
+
             await _client.StartAsync();
 
             // Block this task until the program is closed.
