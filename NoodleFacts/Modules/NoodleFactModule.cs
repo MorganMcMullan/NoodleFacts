@@ -9,25 +9,25 @@ namespace NoodleFacts.Modules
     public class NoodleFactModule : ModuleBase<SocketCommandContext>
     {
         [Command("Hi Riley")]
-        public async Task Great1()
+        public async Task Great1([Remainder] string ignore = null)
         {
             await GetRandomNoodleFactAsync();
         }
 
         [Command("Hi Riley!")]
-        public async Task Great2()
+        public async Task Great2([Remainder] string ignore = null)
         {
             await GetRandomNoodleFactAsync();
         }
 
         [Command("Hi Riley.")]
-        public async Task Great3()
+        public async Task Great3([Remainder] string ignore = null)
         {
             await GetRandomNoodleFactAsync();
         }
 
         [Command("mlem")]
-        public async Task Mlem1()
+        public async Task Mlem1([Remainder] string ignore = null)
         {
             string reply = "Mlem!";
             Random random = new Random();
@@ -40,7 +40,7 @@ namespace NoodleFacts.Modules
 
 
         [Command("mlem!")]
-        public async Task Mlem2()
+        public async Task Mlem2([Remainder] string ignore = null)
         {
             string reply = "Mlem!";
             Random random = new Random();
@@ -52,7 +52,7 @@ namespace NoodleFacts.Modules
         }
 
         [Command("mlem.")]
-        public async Task Mlem3()
+        public async Task Mlem3([Remainder] string ignore = null)
         {
             string reply = "Mlem!";
             Random random = new Random();
@@ -64,7 +64,7 @@ namespace NoodleFacts.Modules
         }
 
         [Command("mlem?")]
-        public async Task Mlem4()
+        public async Task Mlem4([Remainder] string ignore = null)
         {
             string reply = "Mlem!";
             Random random = new Random();
@@ -76,33 +76,33 @@ namespace NoodleFacts.Modules
         }
 
         [Command("🐀")]
-        public async Task Nom1()
+        public async Task Nom1([Remainder] string ignore = null)
         {
             string reply = "*Nom*";
             await ReplyAsync(reply);
         }
 
         [Command("🐁")]
-        public async Task Nom2()
+        public async Task Nom2([Remainder] string ignore = null)
         {
             string reply = "*Nom*";
             await ReplyAsync(reply);
         }
 
         [Command("🐭")]
-        public async Task Nom3()
+        public async Task Nom3([Remainder] string ignore = null)
         {
             string reply = "*Nom*";
             await ReplyAsync(reply);
         }
 
         [Command("!inabox")]
-        public async Task InABox()
+        public async Task InABox([Remainder] string ignore = null)
         {
             await ReplyAsync("I'm living in a box now. 🐳📦");
         }
 
-        public async Task GetRandomNoodleFactAsync()
+        public async Task GetRandomNoodleFactAsync([Remainder] string ignore = null)
         {
             string fact = NoodleFactList.GetRandomFact();
             fact = fact == "" ? "Snakes are cute" : fact;
@@ -127,7 +127,7 @@ namespace NoodleFacts.Modules
         }
         [RequireUserPermission(GuildPermission.Administrator)]
         [Command("!noodlefactcount")]
-        public async Task GetNoodleFactCountAsync()
+        public async Task GetNoodleFactCountAsync([Remainder] string ignore = null)
         {
             int factCount = NoodleFactList.FactList.Count;
             await ReplyAsync("Mlem! I know " + factCount + " noodle facts!");
@@ -155,7 +155,7 @@ namespace NoodleFacts.Modules
 
         [RequireUserPermission(GuildPermission.Administrator)]
         [Command("!lastfact")]
-        public async Task GetLastFactAsync()
+        public async Task GetLastFactAsync([Remainder] string ignore = null)
         {
             int lastfact = NoodleFactList.LastFact;
             var reply = "Mlem! The last fact was: " + NoodleFactList.FactList[lastfact].Fact;
