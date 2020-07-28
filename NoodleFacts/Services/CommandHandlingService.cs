@@ -6,7 +6,6 @@ using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
-using NoodleFacts.Facts;
 
 namespace NoodleFacts.Services
 {
@@ -30,7 +29,6 @@ namespace NoodleFacts.Services
             _provider = provider;
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _provider);
             // Add additional initialization code here...
-            NoodleFactList.LoadFacts();
         }
 
         private async Task MessageReceived(SocketMessage rawMessage)
