@@ -130,7 +130,6 @@ namespace NoodleFacts.Modules
 		{
 			try
 			{
-				factId--;
 				string fact = dbContext.Facts.First(f => f.FactID == factId).FactText;
 				fact = fact == "" ? "Snakes are cute" : fact;
 				await ReplyAsync("Mlem! Hi " + Context.User.Mention + "! Did you know that: " + fact);
@@ -175,9 +174,9 @@ namespace NoodleFacts.Modules
 		[Command("!lastfact")]
 		public async Task GetLastFactAsync([Remainder] string ignore = null)
 		{
-			Fact fact = await dbContext.Facts.FirstAsync(f => f.FactID == lastFact);
+			Fact fact = dbContext.Facts.First(f => f.FactID == lastFact);
 			var reply = "Mlem! The last fact was: " + fact.FactText;
-			reply += "\nMlem! The last fact was number: " + fact.FactID + 1;
+			reply += "\nMlem! The last fact was number: " + fact.FactID;
 			await ReplyAsync(reply);
 		}
 	}
