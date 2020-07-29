@@ -144,7 +144,7 @@ namespace NoodleFacts.Modules
 		[Command("!noodlefactcount")]
 		public async Task GetNoodleFactCountAsync([Remainder] string ignore = null)
 		{
-			int factCount = await dbContext.Facts.CountAsync();
+			int factCount = dbContext.Facts.Count();
 			await ReplyAsync("Mlem! I know " + factCount + " noodle facts!");
 		}
 
